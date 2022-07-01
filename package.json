@@ -1,0 +1,22 @@
+{
+  "name": "pet_store_automation",
+  "version": "1.0.0",
+  "description": "Pet Store Automation suite to test the Swagger Petstore Sample API",
+  "main": "index.js",
+  "scripts": {
+    "run:server": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jejimenez/auxisTest.git"
+  },
+  "author": "jejimeneza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jejimenez/auxisTest/issues"
+  },
+  "homepage": "https://github.com/jejimenez/auxisTest#readme",
+  "devDependencies": {
+    "cypress": "^9.5.1"
+  }
+}
