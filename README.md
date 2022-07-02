@@ -1,6 +1,9 @@
 # auxisTest
 
-The Home Challenge from Auxis repository contains the automation test suite to test the Swagger Petstore Sample API. It's developed using cypress.
+## Tasks
+* A single markdown file with the exploratory testing charters: https://github.com/jejimenez/auxisTest/blob/main/ExploratorySession.md
+* A separate folder containing test automation implementation: https://github.com/jejimenez/auxisTest
+
 
 ### Requirements
 
@@ -9,6 +12,7 @@ The Home Challenge from Auxis repository contains the automation test suite to t
 
 ### Common setup
 
+The Home Challenge from Auxis repository contains the automation test suite to test the Swagger Petstore Sample API. It's developed using cypress.
 Follow the steps to install the Swagger Pet Store locally, and run it in port 8050: https://github.com/swagger-api/swagger-petstore
 
 Clone the repo.
