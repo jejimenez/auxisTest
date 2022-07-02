@@ -1,4 +1,4 @@
-describe("Test Pet CRUD", () => {
+describe("Test Pets", () => {
 
   beforeEach(() => {
     // alias the pets fixtures
@@ -14,7 +14,7 @@ describe("Test Pet CRUD", () => {
       }).then((response) => {
         expect(response.status).to.eq(200);
         expect(response.body).to.have.property("id");
-        //guardar el id del empleado
+        //store the pet id
         const petid = response.body.id;
         cy.wrap(petid).as('petid');
       });
@@ -59,13 +59,15 @@ describe("Test Pet CRUD", () => {
       }).then((response) => {
         expect(response.status).to.eq(200);
         expect(response.body).to.have.property("id");
+        expect(response.body.id).to.eq(10);
+        expect(response.body.name).to.eq('Cat Modified');
       });
     });
 
 
     it("Should retrieve the just modified pet", function () {
       cy.request("GET", `pet/${this.petid}`).then((response) => {
-        //validate that the petid was created
+        //validate that the petid was modified
         expect(response.body.name).to.eq(
           "Cat Modified"
         );
@@ -76,10 +78,11 @@ describe("Test Pet CRUD", () => {
     it("Should delete the just created pet", function () {
       cy.request({
         url: `pet/${this.pets[0].id}`,
+        // Delete the petid
         method: "DELETE",
       }).then((response) => {
         expect(response.status).to.eq(200);
       });
     });
     
-  });
+});
